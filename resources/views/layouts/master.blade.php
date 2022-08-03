@@ -7,10 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Rental Managemnent System</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -45,10 +45,9 @@
 
         </div>
     </div>
-   
+    
     <!-- core:js -->
     <script src="{{ asset('assets/js/core/core.js') }}"></script>
-
     <!-- endinject -->
 
     <!-- Plugin js for this page -->
@@ -56,7 +55,8 @@
     <script src="{{ asset('assets/js/jquery.flot/jquery.flot.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.flot/jquery.flot.resize.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="{{ asset('assets/js/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.4/apexcharts.min.js"></script>
    
 
 
@@ -66,6 +66,13 @@
     <script src="{{ asset('assets/js/feather-icons/feather.min.js') }}"></script>
     <script src="{{ asset('assets/js/template.js') }}"></script>
     <!-- endinject -->
+
+   
+    <script src="{{ asset('assets/js/dashboard-light.js') }}"></script>
+    <script src="{{ asset('assets/js/datepicker.js') }}"></script>
+   
+
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script>  It was overriding the other js -->
 
 </body>
 </html>
