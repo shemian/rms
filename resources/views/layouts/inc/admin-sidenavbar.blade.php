@@ -13,11 +13,12 @@
         <ul class="nav">
           <li class="nav-item nav-category">Main</li>
           <li class="nav-item">
-            <a href="dashboard.html" class="nav-link">
+            <a href="" class="nav-link">
               <i class="link-icon" data-feather="box"></i>
               <span class="link-title">Dashboard</span>
             </a>
           </li>
+          
           <!-- Tenants -->
           <li class="nav-item nav-category">Components</li>
           <li class="nav-item">
