@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TenantProfileController;
 use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +28,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('/admin')->middleware(['auth','isAdmin'])->group(function() {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admindashboard');
+    Route::get('/tenant', [TenantProfileController::class, 'index'])->name('tenant-index');
+    Route::get('/tenant/create', [TenantProfileController::class, 'create'])->name('tenant-create');
+    Route::post('/tenant', [TenantProfileController::class, 'store'])->name('tenant-store');
 });

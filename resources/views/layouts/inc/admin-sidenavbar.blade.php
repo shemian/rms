@@ -30,10 +30,10 @@
             <div class="collapse" id="tenants">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Register Tenants</a>
+                  <a href="{{route('tenant-create') }}" class="nav-link">Register Tenants</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">View Tenants</a>
+                  <a href="{{route('tenant-index') }}" class="nav-link">View Tenants</a>
                 </li>
               </ul>
             </div>

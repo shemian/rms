@@ -44,12 +44,11 @@ class TenantProfileRequest extends FormRequest
                 'max:10'
             ],
             'image'=>[
-                'string',
+                'nullable',
                 'mimes:jpg,png,jpeg'
             ],
             'image_identity'=>[
-
-                'string',
+                'nullable',
                 'mimes:jpg,png,jpeg'
             ],
             'address'=>[

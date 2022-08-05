@@ -20,7 +20,7 @@ class TenantProfile extends Model
         'occupation_status',
         'occupation_place',
         'emergency_contact_person',
-        'emergency_conact_number',
+        'emergency_contact_number',
     ];
 
 }

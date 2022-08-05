@@ -23,7 +23,7 @@
                 </div>
                 <div class="row mt-4">
                     <div class="col-md-6">
-                        <label for="Phone">Phone Number</label>
+                        <label for="phone">Phone Number</label>
                         <input type="text" name="phone" class="form-control" placeholder="Enter Email" >
                     </div>
                     <div class="col-md-6">
