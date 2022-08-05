@@ -15,10 +15,12 @@ class TenantProfile extends Model
         'phone',
         'id_number',
         'image',
+        'image_identity',
         'address',
         'occupation_status',
         'occupation_place',
         'emergency_contact_person',
         'emergency_conact_number',
     ];
+
 }

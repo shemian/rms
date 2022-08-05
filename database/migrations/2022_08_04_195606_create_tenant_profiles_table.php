@@ -20,6 +20,7 @@ class CreateTenantProfilesTable extends Migration
             $table->string('phone');
             $table->string('id_number');
             $table->string('image');
+            $table->string('image_identity');
             $table->string('address');
             $table->string('occupation_status');
             $table->string('occupation_place');
