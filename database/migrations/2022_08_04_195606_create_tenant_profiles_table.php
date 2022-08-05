@@ -25,7 +25,7 @@ class CreateTenantProfilesTable extends Migration
             $table->string('occupation_status');
             $table->string('occupation_place');
             $table->string('emergency_contact_person');
-            $table->string('emergency_conact_number');
+            $table->string('emergency_contact_number');
             $table->timestamps();
         });
     }
