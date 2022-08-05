@@ -40,6 +40,7 @@ class TenantProfileRequest extends FormRequest
                 'max:10'
             ],
             'id_number'=>[
+                'required',
                 'string',
                 'max:10'
             ],
@@ -59,11 +60,13 @@ class TenantProfileRequest extends FormRequest
             'occupation_status'=>[
 
                 'string',
+                'max:200',
 
             ],
             'occupation_place'=>[
 
                 'string',
+                'max:200',
 
             ],
             'emergency_contact_person'=>[
