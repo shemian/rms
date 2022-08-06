@@ -26,6 +26,8 @@
 	<link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
     <!-- End layout styles -->
 
+    @yield('styles')
+
 
 </head>
 <body>
@@ -70,6 +72,8 @@
    
     <script src="{{ asset('assets/js/dashboard-light.js') }}"></script>
     <script src="{{ asset('assets/js/datepicker.js') }}"></script>
+
+    @yield('scripts')
    
 
     <!-- <script src="{{ asset('js/app.js') }}" defer></script>  It was overriding the other js -->
