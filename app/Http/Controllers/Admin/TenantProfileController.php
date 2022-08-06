@@ -18,6 +18,7 @@ class TenantProfileController extends Controller
     }
 
     public function store(TenantProfileRequest $request){
+        
 
         $data = $request->validated();
 
@@ -46,6 +47,7 @@ class TenantProfileController extends Controller
         $tenantProfile->emergency_contact_person =$data['emergency_contact_person'];
         $tenantProfile->emergency_contact_number =$data['emergency_contact_number'];
         $tenantProfile->save();
-        return redirect('admin.tenant.index');
+        
+        return redirect()->route('tenant-index');
     }
 }
