@@ -59,7 +59,7 @@
             "url" : "/admin/gettenant",
             "type" : "GET",
             error: function(thrownError){
-            console.log(thrownError);// to debug error
+            console.log(thrownError);// to debug error on dataTables 
         }
         },
         columns: [

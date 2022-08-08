@@ -25,6 +25,7 @@
     <!-- Layout styles -->  
 	<link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
     <!-- End layout styles -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
     @yield('styles')
 
@@ -59,6 +60,8 @@
     <script src="{{ asset('assets/js/bootstrap-datepicker/bootstrap-datepicker.min.js') }}"></script>
     <script src="{{ asset('assets/js/apexcharts/apexcharts.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.4/apexcharts.min.js"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    
    
 
 
