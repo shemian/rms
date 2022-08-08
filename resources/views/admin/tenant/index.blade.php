@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="card-body">
-            <table class="table table-bordered" id="tenant-table">
+            <table class="table table-bordered table-striped" id="tenant-table">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -53,8 +53,11 @@
     var table = $('#tenant-table').DataTable({
         processing: true,
         serverSide: true,
-       
-
+        // scrollX: true,
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ], //not working
+        
         ajax: {
             "url" : "/admin/gettenant",
             "type" : "GET",
@@ -76,6 +79,7 @@
                 searchable: true,
             }, 
         ]
+        
 
        
     });
