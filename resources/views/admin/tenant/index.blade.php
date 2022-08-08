@@ -3,7 +3,7 @@
 @section('content')
 
 @section('styles')
-<h1>jhfhjh</h1>
+<link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
 
 @endsection()
 <div class="container mt-5">
@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="card-body">
-            <table class="table table-bordered yajra-datatable">
+            <table class="table table-bordered" id="tenant-table">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -27,6 +27,7 @@
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Id Number</th>
+                        <th>Address</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -45,9 +46,42 @@
 
 
 @section('scripts')
+<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+  $(function () {
 
-<script >
-    alert('this')
+    var table = $('#tenant-table').DataTable({
+        processing: true,
+        serverSide: true,
+       
+
+        ajax: {
+            "url" : "/admin/gettenant",
+            "type" : "GET",
+            error: function(thrownError){
+            console.log(thrownError);// to debug error
+        }
+        },
+        columns: [
+            {data: 'id', name: 'id'},
+            {data: 'name', name: 'name'},
+            {data: 'email', name: 'email'},
+            {data: 'phone', name: 'phone'},
+            {data: 'id_number', name: 'id_number'},
+            {data: 'address', name: 'address'},
+            {
+                data: 'action', 
+                name: 'action', 
+                orderable: true, 
+                searchable: true,
+            }, 
+        ]
+
+       
+    });
+
+  });
 </script>
+
 @endsection()
 
