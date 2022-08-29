@@ -48,10 +48,10 @@
             <div class="collapse" id="landlords">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Register Landlords</a>
+                  <a href="{{ route('landlord-create')}}" class="nav-link">Register Landlords</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">View Landlords</a>
+                  <a href="{{ route('landlord-index')}}" class="nav-link">View Landlords</a>
                 </li>
               </ul>
             </div>

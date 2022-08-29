@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TenantProfileController;
+use App\Http\Controllers\Admin\LandlordProfileController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -28,8 +29,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('/admin')->middleware(['auth','isAdmin'])->group(function() {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admindashboard');
+    //tenants
     Route::get('/tenant', [TenantProfileController::class, 'index'])->name('tenant-index');
     Route::get('/gettenant', [TenantProfileController::class, 'getTenant'])->name('tenant.list');
     Route::get('/tenant/create', [TenantProfileController::class, 'create'])->name('tenant-create');
     Route::post('/tenant', [TenantProfileController::class, 'store'])->name('tenant-store');
+
+    //landlords
+    Route::get('/landlord', [LandlordProfileController::class, 'index'])->name('landlord-index');
+    Route::get('/landlord/create', [LandlordProfileController::class, 'create'])->name('landlord-create');
 });
