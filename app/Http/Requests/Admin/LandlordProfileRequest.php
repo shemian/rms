@@ -13,7 +13,7 @@ class LandlordProfileRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -54,6 +54,7 @@ class LandlordProfileRequest extends FormRequest
                 'string',
                 'max:20'
             ],
+
             'bank_associated'=>[
                 'string',
                 'max:20',
