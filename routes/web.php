@@ -38,4 +38,5 @@ Route::prefix('/admin')->middleware(['auth','isAdmin'])->group(function() {
     //landlords
     Route::get('/landlord', [LandlordProfileController::class, 'index'])->name('landlord-index');
     Route::get('/landlord/create', [LandlordProfileController::class, 'create'])->name('landlord-create');
+    Route::post('/landlord', [LandlordProfileController::class, 'store'])->name('landlord-store');
 });
