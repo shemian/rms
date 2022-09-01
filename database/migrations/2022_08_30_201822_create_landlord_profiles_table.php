@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateLandlordProfilesTable extends Migration
 {
+    
     /**
      * Run the migrations.
      *
@@ -25,6 +26,7 @@ class CreateLandlordProfilesTable extends Migration
             $table->string('bank_account');
             $table->timestamps();
         });
+        
     }
 
     /**
