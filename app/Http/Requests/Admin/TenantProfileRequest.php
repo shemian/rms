@@ -59,7 +59,6 @@ class TenantProfileRequest extends FormRequest
                 'max:20'
             ],
             'occupation_status'=>[
-
                 'string',
                 'max:200',
 
@@ -80,12 +79,7 @@ class TenantProfileRequest extends FormRequest
                 'string',
                 'max:200'
             ],
-
-
-
         ];
-
-
         return $rules;
     }
 }
