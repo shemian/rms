@@ -22,8 +22,8 @@ class CreateLandlordProfilesTable extends Migration
             $table->string('id_number');
             $table->string('image_identity')->nullable();
             $table->string('address');
-            $table->string('bank_associated');
-            $table->string('bank_account');
+            $table->string('bank_associated')->nullable();
+            $table->string('bank_account')->nullable();
             $table->timestamps();
         });
         
