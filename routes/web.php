@@ -31,12 +31,16 @@ Route::prefix('/admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admindashboard');
     //tenants
     Route::get('/tenant', [TenantProfileController::class, 'index'])->name('tenant-index');
-    Route::get('/gettenant', [TenantProfileController::class, 'getTenant'])->name('tenant.list');
-    Route::get('/tenant/create', [TenantProfileController::class, 'create'])->name('tenant-create');
+    Route::get('/tenant/create', [TenantProfileController::class, 'create'])->name('tenant-create');      
     Route::post('/tenant', [TenantProfileController::class, 'store'])->name('tenant-store');
+    Route::get('/gettenant', [TenantProfileController::class, 'getTenant'])->name('tenant.list');
 
     //landlords
     Route::get('/landlord', [LandlordProfileController::class, 'index'])->name('landlord-index');
     Route::get('/landlord/create', [LandlordProfileController::class, 'create'])->name('landlord-create');
     Route::post('/landlord', [LandlordProfileController::class, 'store'])->name('landlord-store');
+    Route::get('/getlandlord', [LandlordProfileController::class, 'getLandlord'])->name('landlord.list');
+
+    //properties
+
 });
