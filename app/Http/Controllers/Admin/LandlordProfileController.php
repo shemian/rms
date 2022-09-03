@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Log;
-use Datatables;
+use Yajra\DataTables\DataTables; //include datatables
 use App\Models\Admin\LandlordProfile;
 use App\Http\Requests\Admin\LandlordProfileRequest;
 
@@ -46,5 +46,20 @@ class LandlordProfileController extends Controller
 
         return redirect()->route('landlord-index');
 
+    }
+
+    public function getLandlord(Request $request){
+        
+        if ($request->ajax()) {
+            $landlordprofile = LandlordProfile::all();
+            return Datatables::of($landlordprofile)
+                ->addIndexColumn()
+                ->addColumn('action', function($row){
+                    $actionBtn = '<a href="#" class="edit btn btn-success btn-sm"><i class="bi-class-search"></i></a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+                    return $actionBtn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
     }
 }
