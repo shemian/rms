@@ -23,6 +23,8 @@ class LandlordProfileRequest extends FormRequest
      */
     public function rules()
     {
+    
+
         $rules = [
             'name'=>[
                 'required',
@@ -56,10 +58,12 @@ class LandlordProfileRequest extends FormRequest
             ],
 
             'bank_associated'=>[
+                'nullable',
                 'string',
                 'max:20',
             ],
             'bank_account'=>[
+                'nullable',
                 'string',
                
             ]

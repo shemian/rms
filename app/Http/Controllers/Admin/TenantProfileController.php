@@ -37,7 +37,7 @@ class TenantProfileController extends Controller
     }
 
     public function store(TenantProfileRequest $request){
-        
+   
 
         $data = $request->validated();
 

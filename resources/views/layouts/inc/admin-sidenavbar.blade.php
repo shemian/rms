@@ -42,16 +42,16 @@
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#landlords" role="button" aria-expanded="false" aria-controls="landlords">
               <i class="link-icon" data-feather="user"></i>
-              <span class="link-title">Landlords</span>
+              <span class="link-title">landlords</span>
               <i class="link-arrow" data-feather="chevron-down"></i>
             </a>
             <div class="collapse" id="landlords">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="{{ route('landlord-create')}}" class="nav-link">Register Landlords</a>
+                  <a href="{{route('landlord-create') }}" class="nav-link">Create  Landlord</a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('landlord-index')}}" class="nav-link">View Landlords</a>
+                  <a href="{{route('landlord-index') }}" class="nav-link">View Landlord</a>
                 </li>
               </ul>
             </div>

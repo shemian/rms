@@ -21,10 +21,10 @@ class LandlordProfileController extends Controller
     }
 
     public function store(LandlordProfileRequest $request){
+    
        
         $data = $request->validated();
-       
-       
+     
         $landlordProfile = new LandlordProfile();
         $landlordProfile->name =$data['name'];
         $landlordProfile->email =$data['email'];
@@ -41,6 +41,8 @@ class LandlordProfileController extends Controller
         $landlordProfile->bank_associated =$data['bank_associated'];
         $landlordProfile->bank_account =$data['bank_account'];
         $landlordProfile->save();
+
+        Log::info($request);
 
         return redirect()->route('landlord-index');
 
