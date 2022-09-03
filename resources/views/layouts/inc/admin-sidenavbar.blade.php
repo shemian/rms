@@ -67,10 +67,10 @@
             <div class="collapse" id="properties">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="#" class="nav-link">Create  Properties</a>
+                  <a href="{{ route('property-create') }}" class="nav-link">Create Property</a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">View Properties</a>
+                  <a href="{{ route('property-index') }}" class="nav-link">View Property</a>
                 </li>
               </ul>
             </div>

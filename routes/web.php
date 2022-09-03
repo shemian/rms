@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\TenantProfileController;
 use App\Http\Controllers\Admin\LandlordProfileController;
+use App\Http\Controllers\Admin\PropertyController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -42,5 +43,7 @@ Route::prefix('/admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::get('/getlandlord', [LandlordProfileController::class, 'getLandlord'])->name('landlord.list');
 
     //properties
-
+    
+    Route::get('/property', [PropertyController::class, 'index'])->name('property-index');
+    Route::get('/property/create', [PropertyController::class, 'create'])->name('property-create');
 });
