@@ -8,7 +8,7 @@ use Log;
 use DataTables;
 use App\Http\Requests\Admin\TenantProfileRequest;
 use App\Models\Admin\TenantProfile;
-use App\DataTables\Admin\TenantProfileDataTable;
+
 
 class TenantProfileController extends Controller
 {
