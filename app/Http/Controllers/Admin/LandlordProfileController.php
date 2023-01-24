@@ -8,6 +8,7 @@ use Log;
 use Yajra\DataTables\DataTables; //include datatables
 use App\Models\Admin\LandlordProfile;
 use App\Http\Requests\Admin\LandlordProfileRequest;
+use Illuminate\Support\Facades\DB;
 
 
 class LandlordProfileController extends Controller
@@ -41,18 +42,18 @@ class LandlordProfileController extends Controller
         $landlordProfile->bank_associated =$data['bank_associated'];
         $landlordProfile->bank_account =$data['bank_account'];
         $landlordProfile->save();
+        
 
-        Log::info($request);
 
-        return redirect()->route('landlord-index');
+        return redirect()->route('landlord-index',['landlordprofile'=>LandlordProfile::all()]);
 
     }
 
     public function getLandlord(Request $request){
         
         if ($request->ajax()) {
-            $landlordprofile = LandlordProfile::all();
-            return Datatables::of($landlordprofile)
+            $landlordprofiles = LandlordProfile::all();
+            return Datatables::of($landlordprofiles)
                 ->addIndexColumn()
                 ->addColumn('action', function($row){
                     $actionBtn = '<a href="#" class="edit btn btn-success btn-sm"><i class="bi-class-search"></i></a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
@@ -61,5 +62,9 @@ class LandlordProfileController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
+
+       
     }
 }
+
+
