@@ -31,7 +31,7 @@ class TenantProfileRequest extends FormRequest
                 'max:200'
             ],
             'email'=>[
-                'required',
+                'required|email|unique:tenants',
                 'string',
                 'max:200'
             ],
