@@ -19,5 +19,10 @@ class LandlordProfile extends Model
         'bank_associated',
         'bank_account',
     ];
+
+
+    public function getProperty(){
+        return $this->hasMany('App\Models\Admin\Property');
+    }
     
 }
