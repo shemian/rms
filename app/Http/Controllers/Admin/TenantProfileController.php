@@ -16,6 +16,7 @@ class TenantProfileController extends Controller
      
         return view('admin.tenant.index');
     }
+    
 
     public function getTenant(Request $request){
         
@@ -31,6 +32,7 @@ class TenantProfileController extends Controller
                 ->make(true);
         }
     }
+    
 
     public function create(){
         return view('admin.tenant.create');
