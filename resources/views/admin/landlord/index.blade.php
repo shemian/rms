@@ -15,6 +15,7 @@
                 </div>
                 <div class="col-md-3">
                    <a class="mb-2 btn btn-primary" href="{{route('landlord-create')}}" role="button">Add Landlord</a>
+                 
                 </div>
             </div>
         </div>
