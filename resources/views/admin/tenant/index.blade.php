@@ -65,6 +65,7 @@
             console.log(thrownError);// to debug error on dataTables 
         }
         },
+        
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},
