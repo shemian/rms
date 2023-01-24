@@ -16,9 +16,9 @@ class CreateTenantProfilesTable extends Migration
         Schema::create('tenant_profiles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('phone');
-            $table->string('id_number');
+            $table->string('id_number')->unique();
             $table->string('image')->nullable();
             $table->string('image_identity')->nullable();
             $table->string('address');
