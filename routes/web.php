@@ -43,7 +43,8 @@ Route::prefix('/admin')->middleware(['auth','isAdmin'])->group(function() {
     Route::get('/getlandlord', [LandlordProfileController::class, 'getLandlord'])->name('landlord.list');
 
     //properties
-    
     Route::get('/property', [PropertyController::class, 'index'])->name('property-index');
     Route::get('/property/create', [PropertyController::class, 'create'])->name('property-create');
+    Route::post('/property', [PropertyController::class, 'store'])->name('property-store');
 });
+
