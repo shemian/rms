@@ -50,6 +50,7 @@
 
             </div>
             @include('layouts.inc.footer')
+            
 
         </div>
     </div>
