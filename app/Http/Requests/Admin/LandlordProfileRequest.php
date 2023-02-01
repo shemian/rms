@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Admin;
 
+
 use Illuminate\Foundation\Http\FormRequest;
 
 class LandlordProfileRequest extends FormRequest
@@ -33,6 +34,8 @@ class LandlordProfileRequest extends FormRequest
             ],
             'email'=>[
                 'required',
+                'email:rfc,dns',
+                'unique:landlord_profiles',
                 'string',
                 'max:200'
             ],
